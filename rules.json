@@ -1,0 +1,35 @@
+
+[
+  {
+      "conditions": [
+          {
+              "field": "sender",
+              "predicate": "Contains",
+              "value": "someone@example.com"
+          },
+          {
+              "field": "Subject",
+              "predicate": "Contains",
+              "value": "important"
+          }
+      ],
+      "predicate": "All",
+      "actions": [
+          "Mark as read",
+          "Move Message: Urgent"
+      ]
+  },
+  {
+      "conditions": [
+          {
+              "field": "Received Date/Time",
+              "predicate": "Less than",
+              "value": "2024-05-01"
+          }
+      ],
+      "predicate": "Any",
+      "actions": [
+          "Move Message: Archive"
+      ]
+  }
+]
